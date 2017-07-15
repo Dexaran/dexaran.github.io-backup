@@ -438,8 +438,7 @@ if (!(contractFunctions[index].outputs.length > 0) || (contractFunctions[index].
                // if (curFunc.inputs[i].type.indexOf('[') !== -1 && curFunc.inputs[i].type.indexOf(']') !== -1) values.push(curFunc.inputs[i].value.split(','));else values.push(curFunc.inputs[i].value);
             } else values.push(''); */
         }
-        var result = "0x";
-        result += funcSig;
+        var result = funcSig;
         result += ethUtil.solidityCoder.encodeParams(types, values);
         //alert(1);
         //var decodedRes = ethUtil.solidityCoder.decodeParams(types, ethUtil.solidityCoder.encodeParams(types, values));
